@@ -1,1 +1,1 @@
-# vizsgamunka_Marci
+# https://ramlethal-enjoyer.github.io/vizsgamunka_Marci/
