@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: rgb(77, 78, 80);
+}
+
+ul {
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+
+p {
+    font-size: 20px;
+}
+
+a{
+    color: rgb(238, 237, 236);
+    font-size: 30px;
+    text-decoration: none;
+    background-color: rgb(10, 112, 196);
+}
+
+iframe {
+   
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+div#content {
+    display: grid;
+    max-width: 1080px;
+    margin: 0 auto;
+    grid-template-columns: repeat (5, 1fr);
+    grid-auto-rows: minmax(100px, auto) ;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "header header header header"
+    "aside main main main"
+    "nav main main main"
+    "section section section section"
+    "section section section section"
+    "section section section section"
+    "footer footer footer footer"
+    ;
+}
+
+@media (max-width: 768px) {
+    div#content {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "header header"
+            "aside main"
+            "nav main"
+            "section section"
+            "section section"
+            "section section"
+            "footer footer";
+    }
+}
+
+@media (max-width: 480px) {
+    div#content {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "aside"
+            "nav"
+            "main"
+            "section"
+            "section"
+            "section"
+            "footer";
+    }
+}
+
+#content > * {
+    background: rgb(5, 86, 236);
+    padding: 30px;
+    color: white;
+}
+
+header {
+    grid-area: header;
+    border-radius: 15px;
+}
+
+main {
+    grid-area: main;
+    border-radius: 15px;
+}
+
+aside {
+    grid-area: aside;
+    border-radius: 15px;
+}
+
+nav {
+    grid-area: nav;
+    border-radius: 15px;
+}
+
+section {
+   grid-area: section;
+   border-radius: 15px;
+}
+
+footer {
+    grid-area: footer;
+    border-radius: 15px;
+}
+
